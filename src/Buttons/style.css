@@ -1,0 +1,44 @@
+.removeButton {
+    color: white;
+    background-color: red;
+    border-style: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    transition: 1s;
+}
+
+.removeButton:hover {
+    background-color: hsl(0, 100%, 70%);
+    width: 32px;
+    height: 32px;
+}
+
+.toggleButton {
+    background-color: rgb(12, 104, 0);
+    border-style: none;
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transition: 1s;
+}
+
+.toggleButton:hover {
+    background-color: hsl(121, 100%, 50%);
+    border-style: none;
+    width: 32px;
+    height: 32px;
+}
+
+.toggleButton:active {
+    background-color: hsl(121, 100%, 50%);
+    border-style: none;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
