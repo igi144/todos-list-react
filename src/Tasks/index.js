@@ -1,12 +1,12 @@
-import "./style.css"
+import "./style.css";
 
-const Tasks = ({tasks, hideDoneTasks}) => (
+const Tasks = ({ tasks, hideDoneTasks }) => (
     <ul className="tasksList">
         {tasks.map(task => (
             <li key={task.id}
                 className={`tasks__item  ${task.done && hideDoneTasks
-                        ? "tasksHide"
-                        : ""}`}
+                    ? "tasksHide"
+                    : ""}`}
             >
                 <button className="js-toggleButton toggleButton ">
                     {task.done ? "✓" : ""}
@@ -19,9 +19,7 @@ const Tasks = ({tasks, hideDoneTasks}) => (
                 </button>
             </li>
         ))}
-
     </ul>
-
-)
+);
 
 export default Tasks;
