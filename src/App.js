@@ -37,10 +37,22 @@ function App() {
   }
 
   const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({ 
-      ...task, 
-      done: true, 
+    setTasks(tasks => tasks.map(task => ({
+      ...task,
+      done: true,
     })));
+  };
+
+  const addNewTask = (newTaskContent) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content: newTaskContent,
+        done: false,
+        id: tasks.lenght === 0 ? 1 : tasks[tasks.length - 1].id + 1
+      },
+    ]);
+
   };
 
 
@@ -49,7 +61,8 @@ function App() {
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form />}
+        body={<Form 
+        addNewTask={addNewTask}/>}
       />
 
       <Section
@@ -63,12 +76,12 @@ function App() {
           />
         }
         extraHeaderContent={
-        <Buttons 
-        tasks={tasks} 
-        hideDone={hideDone} 
-        toggleHideDone={toggleHideDone} 
-        setAllDone={setAllDone}
-        />
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            setAllDone={setAllDone}
+          />
         }
       />
     </Container>
