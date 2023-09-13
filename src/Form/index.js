@@ -6,6 +6,10 @@ const Form = (props) => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const onFormSubmit = (event) => {
         event.preventDefault();
+        {
+            if (newTaskContent === "")
+                return
+        }
         props.addNewTask(newTaskContent.trim());
         setNewTaskContent("");
     }
