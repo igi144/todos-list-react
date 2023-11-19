@@ -31,3 +31,21 @@
 :disabled {
     color: rgb(182, 182, 182)
 }
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::after, ::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    word-break: break-word;
+    max-width: 100%;
+    font-size: 20px;
+    padding: 30px;
+    margin: 10px;
+  }
