@@ -7,14 +7,18 @@ import Container from "./Container";
 import { useState } from 'react';
 
 function App() {
+
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   const setLocalStorage = () => {
+    if (tasks === "") {
+      return
+    }
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }
 
-  setLocalStorage()
+  setLocalStorage();
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone)
