@@ -6,6 +6,7 @@
     width: 30px;
     height: 30px;
     transition: 1s;
+    text-align: center;
 }
 
 .removeButton:hover {
@@ -23,6 +24,7 @@
     height: 30px;
     padding: 0;
     transition: 1s;
+    text-align: center;
 }
 
 .toggleButton:hover {

@@ -6,7 +6,7 @@
 
 .section__header {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-size: 20px;
     padding: 20px;
@@ -17,3 +17,4 @@
 .section__body {
     padding: 10px;
 }
+

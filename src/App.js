@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { useState} from 'react';
+import { useState } from 'react';
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -13,7 +13,11 @@ function App() {
   const [tasks, setTasks] = useState(
     tasksFromStorage
       ? JSON.parse(tasksFromStorage)
-      : []
+      :
+      [
+        { content: "Zrobić zadanie z modułu 10", done: true },
+        { content: "Zjeść kolację", done: false },
+      ]
   );
 
   const setLocal = () => {

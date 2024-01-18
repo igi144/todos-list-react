@@ -20,8 +20,8 @@
     color: teal;
     background-color: white;
     border-style: none;
-    padding-right: 10px;
     transition: 1s;
+    text-align: center;
 }
 
 .tasksButtons:hover {
@@ -34,18 +34,8 @@
 
 html {
     box-sizing: border-box;
-  }
-  
-  *, *::after, ::before {
+}
+
+*, *::after, ::before {
     box-sizing: inherit;
-  }
-  
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #eee;
-    word-break: break-word;
-    max-width: 100%;
-    font-size: 20px;
-    padding: 30px;
-    margin: 10px;
-  }
+}
