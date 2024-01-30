@@ -15,8 +15,8 @@ function App() {
       ? JSON.parse(tasksFromStorage)
       :
       [
-        { content: "Zrobić zadanie z modułu 10", done: true },
-        { content: "Zjeść kolację", done: false },
+        { content: "Zrobić zadanie z modułu 10", done: true, id: 1 },
+        { content: "Zjeść kolację", done: false, id: 2 },
       ]
   );
 
