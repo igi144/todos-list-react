@@ -2,6 +2,12 @@
     text-decoration: line-through;
 }
 
+.tasksHide {
+    display: none;
+}
+
+
+
 .newTaskButton {
     background-color: teal;
     color: white;

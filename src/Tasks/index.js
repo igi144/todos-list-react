@@ -1,12 +1,11 @@
 import "./style.css";
+import { TaskList, TasksItems } from "./styled";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-    <ul className="tasksList">
+    <TaskList>
         {tasks.map(task => (
-            <li key={task.id}
-                className={`tasks__item  ${task.done && hideDone
-                    ? "tasksHide"
-                    : ""}`}
+            <TasksItems key={task.id}
+                hidden = {task.done && hideDone}
             >
                 <button
                     className="toggleButton"
@@ -21,9 +20,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                     onClick={() => removeTask(task.id)}>
                     🗑
                 </button>
-            </li>
+            </TasksItems>
         ))}
-    </ul>
+    </TaskList>
 );
 
 export default Tasks;
