@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "./style.css";
+import { AddNewTaskButton } from './styled';
 
 const Form = (props) => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -24,7 +25,7 @@ const Form = (props) => {
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <button className="newTaskButton">Dodaj zadanie</button>
+            <AddNewTaskButton>Dodaj zadanie</AddNewTaskButton>
         </form>
     );
 };

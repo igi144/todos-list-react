@@ -1,4 +1,3 @@
-import "./style.css";
 import { TaskList, TasksItems, Content, Button } from "./styled";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
