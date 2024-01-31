@@ -6,30 +6,26 @@ import Header from "./Header";
 import Container from "./Container";
 import { useState, useEffect } from 'react';
 
-function App() {
-  const [hideDone, setHideDone] = useState(false);
-    const setLocalStorage = () => {
+const useTasks = () => {
+
+  const setLocalStorage = () => {
     const localTasksStorage = JSON.parse(localStorage.getItem("tasksStorage"))
 
-    if(localTasksStorage === null) {
+    if (localTasksStorage === null) {
       return [
         { content: "Zrobić zadanie z modułu 10", done: true, id: 1 },
         { content: "Zjeść kolację", done: false, id: 2 },
       ]
-    } 
+    }
 
     return localTasksStorage
-  }
+  };
 
   const [tasks, setTasks] = useState(setLocalStorage);
 
- useEffect(()=>{
-  localStorage.setItem("tasksStorage", JSON.stringify(tasks))
- }, [tasks])
-
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone)
-  };
+  useEffect(() => {
+    localStorage.setItem("tasksStorage", JSON.stringify(tasks))
+  }, [tasks])
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
@@ -57,6 +53,16 @@ function App() {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
       },
     ]);
+  };
+
+  return { removeTask, toggleTaskDone, setAllDone, addNewTask, tasks }
+};
+
+function App() {
+  const [hideDone, setHideDone] = useState(false);
+  const { removeTask, toggleTaskDone, setAllDone, addNewTask, tasks } = useTasks()
+  const toggleHideDone = () => {
+    setHideDone(hideDone => !hideDone)
   };
 
   return (
