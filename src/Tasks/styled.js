@@ -65,7 +65,7 @@ export const TasksItems = styled.li`
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid rgb(238, 238, 238)
+    border-bottom: 1px solid rgb(238, 238, 238);
 
     ${({ hidden }) => hidden && css`
     display: none;

@@ -13,3 +13,19 @@ export const AddNewTaskButton = styled.button`
         transform: scale(1.1);
     }
 `
+
+export const FormContent = styled.form`
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
+
+    @media (max-width: 767px) {
+    display: block;
+    
+}
+`
+export const FormInput = styled.input`
+    padding: 10px;
+    display: block;
+    width: 100%
+`
