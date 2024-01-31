@@ -7,8 +7,11 @@ export const Tasksbuttons = styled.button`
     transition: 1s;
     text-align: center;
 
-    ${({$primary}) => $primary && css`
-    :disabled{
-    color: rgb(182, 182, 182)
+    &:hover {
+        color: hsl(180, 100%, 40%);
+    }
+
+${({ $primary }) => $primary && css`
+    &:disabled {color: rgb(182, 182, 182)}
 }
 ` }`;

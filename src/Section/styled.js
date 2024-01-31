@@ -4,7 +4,7 @@ export const SectionBody = styled.section`
     margin: 10px 0;
     width: 100%;
     background-color: white;
-`
+`;
 
 export const SectionHeader = styled.h2`
     display: flex;
@@ -14,7 +14,8 @@ export const SectionHeader = styled.h2`
     padding: 20px;
     margin: 10px 0;
     border-bottom: 1px solid #ddd;
-`
+`;
+
 export const SectionContent = styled.div`
     padding: 10px;
-`
+`;

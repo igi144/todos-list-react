@@ -13,7 +13,7 @@ const Form = (props) => {
 
         props.addNewTask(newTaskContentTrimed);
         setNewTaskContent("");
-    }
+    };
 
     return (
         <FormContent onSubmit={onFormSubmit}>

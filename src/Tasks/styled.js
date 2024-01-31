@@ -5,16 +5,15 @@ export const TaskList = styled.ul`
     flex-direction: column;
     padding: 0px;
     margin: 0px;
-`
+`;
 
 export const Content = styled.span`
 ${({ $taskDone }) => $taskDone && css`
 text-decoration: line-through;
 `}
-`
+`;
 
 export const Button = styled.button`
-
 ${({ $toggleButton }) => $toggleButton && css`
     background-color: rgb(12, 104, 0);
     border-style: none;
@@ -69,5 +68,5 @@ export const TasksItems = styled.li`
 
     ${({ hidden }) => hidden && css`
     display: none;
-    `}`;
+`}`;
 

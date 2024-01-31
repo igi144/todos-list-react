@@ -11,8 +11,8 @@ export const AddNewTaskButton = styled.button`
 
     &:hover {
         transform: scale(1.1);
-    }
-`
+    };
+`;
 
 export const FormContent = styled.form`
     display: grid;
@@ -22,10 +22,10 @@ export const FormContent = styled.form`
     @media (max-width: 767px) {
     display: block;
     
-}
-`
+};
+`;
 export const FormInput = styled.input`
     padding: 10px;
     display: block;
     width: 100%
-`
+`;
