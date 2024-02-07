@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle/>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"

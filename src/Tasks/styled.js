@@ -14,7 +14,7 @@ text-decoration: line-through;
 `;
 
 export const Button = styled.button`
-${({ $toggleButton }) => $toggleButton && css`
+    ${({ $toggleButton }) => $toggleButton && css`
     background-color: rgb(12, 104, 0);
     border-style: none;
     border: none;
@@ -22,24 +22,21 @@ ${({ $toggleButton }) => $toggleButton && css`
     width: 30px;
     height: 30px;
     padding: 0;
-    transition: 1s;
+    
     text-align: center;
 
     &:hover {
         background-color: hsl(121, 100%, 50%);
         border-style: none;
-        width: 32px;
-        height: 32px;
+        
     }
 
     &:active {
         background-color: hsl(121, 100%, 50%);
         border-style: none;
-        width: 25px;
-        height: 25px;
     }` }
 
-${({ $removeButton }) => $removeButton && css`
+    ${({ $removeButton }) => $removeButton && css`
     color: white;
     background-color: red;
     border-style: none;
@@ -51,9 +48,7 @@ ${({ $removeButton }) => $removeButton && css`
 
     &:hover {
         background-color: hsl(0, 100%, 70%);
-        width: 32px;
-        height: 32px;
-    }
+        
 `}`;
 
 
