@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const TaskList = styled.ul`
+export const List = styled.ul`
     display: flex;
     flex-direction: column;
     padding: 0px;
@@ -52,7 +52,7 @@ export const Button = styled.button`
 `}`;
 
 
-export const TasksItems = styled.li`
+export const Items = styled.li`
     display: grid;
     word-wrap: break-word;
     grid-template-columns: auto 1fr auto;
