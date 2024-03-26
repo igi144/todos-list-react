@@ -6,17 +6,22 @@ import Header from "../common/Header";
 import { useState } from 'react';
 import { useTasks } from "../useTasks";
 import { GlobalStyle } from "../myGlobalStyle";
+import { useSelector } from "react-redux";
+import { tasksSelector } from "./tasksSlice";
 
 function Tasks() {
+
+  const {tasks} = useSelector(tasksSelector)
+
   const [hideDone, setHideDone] = useState(false);
-  const { removeTask, toggleTaskDone, setAllDone, addNewTask, tasks } = useTasks();
+  const { removeTask, toggleTaskDone, setAllDone, addNewTask, } = useTasks();
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone)
   };
 
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
