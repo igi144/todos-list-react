@@ -11,13 +11,13 @@ import { tasksSelector } from "./tasksSlice";
 
 function Tasks() {
 
-  const {tasks} = useSelector(tasksSelector)
+  const { tasks } = useSelector(tasksSelector)
 
   const [hideDone, setHideDone] = useState(false);
   const { removeTask, toggleTaskDone, setAllDone, addNewTask, } = useTasks();
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone)
-  };
+  // const toggleHideDone = () => {
+  //   setHideDone(hideDone => !hideDone)
+  // };
 
   return (
     <>
@@ -42,7 +42,6 @@ function Tasks() {
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
             setAllDone={setAllDone}
           />
         }
