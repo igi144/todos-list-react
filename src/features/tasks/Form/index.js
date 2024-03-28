@@ -4,8 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addTask } from '../../tasksSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
-const Form = (props) => {
-
+const Form = () => {
     const dispatch = useDispatch()
     const inputRef = useRef()
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -26,7 +25,6 @@ const Form = (props) => {
             done: false,
             id: nanoid()
         }))
-
         setNewTaskContent("");
     };
 

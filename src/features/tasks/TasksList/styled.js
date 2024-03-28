@@ -51,7 +51,6 @@ export const Button = styled.button`
         
 `}`;
 
-
 export const Items = styled.li`
     display: grid;
     word-wrap: break-word;

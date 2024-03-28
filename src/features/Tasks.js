@@ -5,9 +5,7 @@ import Section from "../common/Section";
 import Header from "../common/Header";
 import { GlobalStyle } from "../myGlobalStyle";
 
-
 function Tasks() {
-
   return (
     <>
       <GlobalStyle />

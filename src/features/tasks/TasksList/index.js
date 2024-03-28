@@ -3,8 +3,7 @@ import { List, Items, Content, Button } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 
 const TasksList = () => {
-
-    const {tasks, hideDone} = useSelector(tasksSelector)
+    const { tasks, hideDone } = useSelector(tasksSelector)
     const dispatch = useDispatch()
 
     return (

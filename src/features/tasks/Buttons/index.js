@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleHideDone, setAllDone, tasksSelector } from "../../tasksSlice";
 
 const Buttons = () => {
-
     const dispatch = useDispatch()
     const { tasks, hideDone } = useSelector(tasksSelector)
 
