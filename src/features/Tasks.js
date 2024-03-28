@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useTasks } from "../useTasks";
 import { GlobalStyle } from "../myGlobalStyle";
 import { useSelector } from "react-redux";
-import { tasksSelector } from "./tasksSlice";
+import { tasksSelector, tasksSlice } from "./tasksSlice";
 
 function Tasks() {
 
@@ -15,9 +15,7 @@ function Tasks() {
 
   const [hideDone, setHideDone] = useState(false);
   const { removeTask, toggleTaskDone, setAllDone, addNewTask, } = useTasks();
-  // const toggleHideDone = () => {
-  //   setHideDone(hideDone => !hideDone)
-  // };
+ 
 
   return (
     <>
