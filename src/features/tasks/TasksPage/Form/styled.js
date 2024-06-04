@@ -24,8 +24,3 @@ export const FormContent = styled.form`
     
 };
 `;
-export const FormInput = styled.input`
-    padding: 10px;
-    display: block;
-    width: 100%
-`;

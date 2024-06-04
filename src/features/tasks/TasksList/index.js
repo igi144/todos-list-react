@@ -1,10 +1,18 @@
-import { toggleDoneTask, removeTask, selectTasksState } from "../tasksSlice";
+import { Link, useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { toggleDoneTask, removeTask, selectHideDone, selectTaskByQuery } from "../tasksSlice";
 import { List, Items, Content, Button } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 
-const TasksList = () => {
-    const { tasks, hideDone } = useSelector(selectTasksState)
+export const TasksList = () => {
+
+    const location = useLocation()
+    const searchParams = new URLSearchParams(location.search)
+    const query = searchParams.get("szukaj")
+
+    const tasks = useSelector(state => selectTaskByQuery(state, query))
+    const hideDone = useSelector(selectHideDone)
     const dispatch = useDispatch()
+
 
     return (
         <List>
@@ -19,7 +27,7 @@ const TasksList = () => {
                         {task.done ? "✓" : ""}
                     </Button>
                     <Content $taskDone={task.done}>
-                        {task.content}
+                        <Link to={`/zadania/${task.id}`}>{task.content}</Link>
                     </Content>
                     <Button
                         $removeButton
@@ -31,5 +39,3 @@ const TasksList = () => {
         </List>
     );
 }
-
-export default TasksList;
