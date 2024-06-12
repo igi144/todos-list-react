@@ -15,3 +15,12 @@ ${({ $primary }) => $primary && css`
     &:disabled {color: rgb(182, 182, 182)}
 }
 ` }`;
+
+export const ExampleButton = styled.button`
+ color: teal;
+    background-color: white;
+    border-style: none;
+    transition: 1s;
+    text-align: center;
+
+`

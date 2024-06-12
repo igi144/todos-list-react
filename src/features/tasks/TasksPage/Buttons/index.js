@@ -1,4 +1,4 @@
-import { Tasksbuttons } from "./styled";
+import { Tasksbuttons } from "../styled";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleHideDone, setAllDone, selectTasksState, fetchExampleTasks } from "../../tasksSlice";
 
@@ -10,7 +10,7 @@ const Buttons = () => {
         <div>
             {tasks.length > 0 && (
                 <>
-                <Tasksbuttons onClick={()=> dispatch(fetchExampleTasks())}>Pobierz przykładowe zadania</Tasksbuttons>
+                
                     <Tasksbuttons onClick={() => dispatch(toggleHideDone())}>
                         {hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}
                     </Tasksbuttons>

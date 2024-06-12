@@ -7,8 +7,6 @@ export const Search = () => {
     const history = useHistory()
     const query = (new URLSearchParams(location.search)).get("szukaj")
 
-    console.log(history)
-
     const onInputChange = ({target}) => {
 
         const searchParams = new URLSearchParams(location.search)
