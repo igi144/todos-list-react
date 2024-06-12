@@ -1,30 +1,27 @@
-import { fetchExampleTasks } from "../../tasksSlice";
+import { fetchExampleTasks, setLoadingFalse, setLoadingTrue } from "../../tasksSlice";
 import { useDispatch } from "react-redux";
 import { ExampleButton } from "../styled";
-import { useState } from "react";
+import { getLoadingSetting } from "../../tasksSlice";
+import { useSelector } from "react-redux";
 
 export const ExampleTasksButtons = () => {
     const dispatch = useDispatch()
-    const [loading, setLoading] = useState(false)
-
-    const setLoadingTrue = () => {
-        setLoading(true)
-    }
-    const setLoadingFalse = () => {
-        setLoading(false)
-    }
+    const toggleWord = useSelector(getLoadingSetting)
 
     return (
         <ExampleButton
             onClick={() => {
-                setLoadingTrue()
+                dispatch(setLoadingTrue());
                 setTimeout(() => {
-                    setLoadingFalse()
                     dispatch(fetchExampleTasks())
-                }, 1000)
-
-            }}>
-            {!loading ? "Pobierz przykładowe zadania" : "Ładowanie..."}
+                    dispatch(setLoadingFalse())
+                }, 1500)
+            }
+            }
+            disabled={!toggleWord ? false : true}
+            $primary
+        >
+            {!toggleWord ? "Pobierz przykładowe zadania" : "Ładowanie..."}
         </ExampleButton>
     )
 }
