@@ -13,6 +13,8 @@ text-decoration: line-through;
 `}
 `;
 
+
+
 export const Button = styled.button`
     ${({ $toggleButton }) => $toggleButton && css`
     background-color: rgb(12, 104, 0);
@@ -60,7 +62,14 @@ export const Items = styled.li`
     padding: 10px;
     border-bottom: 1px solid rgb(238, 238, 238);
 
-    ${({ hidden }) => hidden && css`
+        ${({ hidden }) => hidden && css`
     display: none;
 `}`;
+
+export const Wrapper = styled.div`
+color: teal
+`
+
+
+
 

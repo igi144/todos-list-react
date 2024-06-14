@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -16,8 +17,25 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 20px;
       background-color: #eee;
       word-break: break-word;
-      padding: 10px;
+      padding: 20px;
       max-width: 1000px;
       margin: 0 auto;
+
+      div{
+        padding: 10px
+      }
 };
+`
+
+export const Wrapper = styled.ul`
+padding: 20px;
+
+
+
+background-color: teal;
+list-style-type: none;
+font-size: 20px;
+&:active{
+  font-weight: bold;
+}
 `
