@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
 
@@ -29,7 +30,16 @@ padding: 20px;
 background-color: teal;
 list-style-type: none;
 font-size: 20px;
-&:active{
-  font-weight: bold;
-}
 `
+
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName: "active"
+}))`
+&.active{
+  font-weight: bold;
+  
+}
+color: white;
+text-decoration: 'none'
+`
+

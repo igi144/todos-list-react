@@ -3,7 +3,7 @@ import { TaskPage } from "./features/tasks/TaskPage";
 import { TasksPage } from "./features/tasks/TasksPage/index";
 
 import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom/cjs/react-router-dom.min";
-import { Container, NavWrapper } from "./myGlobalStyle";
+import { Container, NavWrapper, StyledNavLink } from "./myGlobalStyle";
 
 export const App = () => (
 
@@ -12,20 +12,20 @@ export const App = () => (
     <nav>
       <NavWrapper>
         <li>
-          <Link
+          <StyledNavLink activeClassName="active"
             to="/zadania"
-            style={{ textDecoration: 'none', color: 'white' }}
+            style={{ textDecoration: 'none' }}
           >
             Zadania
-          </Link>
+          </StyledNavLink>
         </li>
         <li>
-          <Link
+          <StyledNavLink activeClassName="active"
             to="/author"
-            style={{ textDecoration: 'none', color: 'white' }}
+            style={{ textDecoration: 'none'}}
           >
             Autor
-          </Link>
+          </StyledNavLink>
         </li>
       </NavWrapper>
       <Switch>
