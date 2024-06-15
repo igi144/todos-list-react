@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   
     background-color: #eee;
     font-family: Open-Sans, Helvetica, Sans-Serif;
+    
   }
 `
 export const Container = styled.div` 
@@ -21,10 +22,13 @@ export const AppContainer = styled.div`
   word-break: break-word;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 10px;
       
 `
 export const NavWrapper = styled.ul`
-grid-template-columns: auto;
+display: flex;
+flex-direction: row;
+gap: 10px;
 justify-content: center;
 padding: 20px;
 background-color: teal;
