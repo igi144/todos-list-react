@@ -4,6 +4,7 @@ import { Input } from '../../Input';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../../tasksSlice';
 import { nanoid } from '@reduxjs/toolkit';
+import { Wrapper } from '../Search/styled';
 
 const Form = () => {
     const dispatch = useDispatch()
@@ -30,13 +31,15 @@ const Form = () => {
     };
 
     return (
-        <FormContent onSubmit={onFormSubmit}>
+        <FormContent onSubmit={onFormSubmit}> 
+        <Wrapper>
             <Input
                 ref={inputRef}
                 value={newTaskContent}
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
+            </Wrapper>
             <AddNewTaskButton onClick={() => setFocusOnInput()}>Dodaj zadanie</AddNewTaskButton>
         </FormContent>
     );
