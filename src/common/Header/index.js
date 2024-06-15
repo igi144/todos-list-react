@@ -1,7 +1,9 @@
+import { AppContainer } from "../../myGlobalStyle";
+
 const Header = ({title}) => (
-    <header>
+    <AppContainer>
         <h1>{title}</h1>
-    </header>
+    </AppContainer>
 );
 
 export default Header; 

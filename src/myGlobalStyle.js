@@ -2,36 +2,30 @@ import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-    html {
-      box-sizing: border-box;
-    }
-
-    *, *::after, ::before {
-      box-sizing: inherit;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      background-color: #eee;
-      word-break: break-word;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-
-      div{
-        padding: 10px
-      }
-};
+ body {
+  
+    background-color: #eee;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+  }
+`
+export const Container = styled.div` 
+background-color: #eee;
 `
 
-export const Wrapper = styled.ul`
+export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  word-break: break-word;
+  max-width: 1000px;
+  margin: 0 auto;
+      
+`
+export const NavWrapper = styled.ul`
+grid-template-columns: auto;
+justify-content: center;
 padding: 20px;
-
-
-
 background-color: teal;
 list-style-type: none;
 font-size: 20px;

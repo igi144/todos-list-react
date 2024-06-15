@@ -2,13 +2,15 @@ import { Autor } from "./features/autor/AuthorPage"
 import { TaskPage } from "./features/tasks/TaskPage";
 import { TasksPage } from "./features/tasks/TasksPage/index";
 
-import { HashRouter, Link, Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
-import { Wrapper } from "./myGlobalStyle";
+import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { Container, NavWrapper } from "./myGlobalStyle";
 
 export const App = () => (
+
+  <Container>
   <HashRouter>
     <nav>
-      <Wrapper>
+      <NavWrapper>
         <li>
           <Link
             to="/zadania"
@@ -25,7 +27,7 @@ export const App = () => (
             Autor
           </Link>
         </li>
-      </Wrapper>
+      </NavWrapper>
       <Switch>
         <Route path="/zadania/:id">
           <TaskPage />
@@ -37,8 +39,10 @@ export const App = () => (
           <Autor />
         </Route>
         <Route path="/">
+        <Redirect to="/zadania"/>
         </Route>
       </Switch>
     </nav>
   </HashRouter>
+  </Container>
 )

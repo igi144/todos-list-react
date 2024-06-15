@@ -1,6 +1,9 @@
+import { AppContainer } from "../../myGlobalStyle";
 import { SectionBody , SectionHeader, SectionContent } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent,}) => (
+
+  <AppContainer>
   <SectionBody>
     <header>
       <SectionHeader>
@@ -12,6 +15,7 @@ const Section = ({ title, body, extraHeaderContent,}) => (
       {body}
     </SectionContent>
   </SectionBody>
+  </AppContainer>
 );
 
 export default Section;
