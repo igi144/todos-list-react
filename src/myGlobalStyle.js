@@ -28,12 +28,14 @@ export const AppContainer = styled.div`
 export const NavWrapper = styled.ul`
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 gap: 10px;
 justify-content: center;
 padding: 20px;
 background-color: teal;
 list-style-type: none;
 font-size: 20px;
+
 `
 
 export const StyledNavLink = styled(NavLink).attrs(() => ({

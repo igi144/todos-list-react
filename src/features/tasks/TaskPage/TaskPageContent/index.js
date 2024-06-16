@@ -14,6 +14,6 @@ export  const TaskPageContent = () => {
       return <Wrapper><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</Wrapper>
     }
     else {
-      return "Nie znaleziono zadania 😒"
+      return ""
     }
   }
