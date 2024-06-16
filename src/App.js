@@ -1,7 +1,6 @@
 import { Autor } from "./features/autor/AuthorPage"
 import { TaskPage } from "./features/tasks/TaskPage";
 import { TasksPage } from "./features/tasks/TasksPage/index";
-
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { Container, NavWrapper, StyledNavLink } from "./myGlobalStyle";
 

@@ -13,8 +13,6 @@ text-decoration: line-through;
 `}
 `;
 
-
-
 export const Button = styled.button`
     ${({ $toggleButton }) => $toggleButton && css`
     background-color: rgb(12, 104, 0);
@@ -50,7 +48,6 @@ export const Button = styled.button`
 
     &:hover {
         background-color: hsl(0, 100%, 70%);
-        
 `}`;
 
 export const Items = styled.li`

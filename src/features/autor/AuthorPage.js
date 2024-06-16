@@ -9,7 +9,7 @@ export const Autor = () => (
     <Header title="O autorze" />
     <Section
       title="Igor Pelczarski"
-      body={<Wrapper>Cześć! Nazywam się Igor Pelczarski, mam 29 lat. Obecnie uczę się programowania w YouCode i jest to moja pierwsza aplikacja</Wrapper>}
+      body={<Wrapper>Cześć! Nazywam się Igor Pelczarski, mam 29 lat. Obecnie uczę się programowania w YouCode i jest to moja pierwsza aplikacja 😎</Wrapper>}
     />
   </>
 )

@@ -4,11 +4,11 @@ import { List, Items, Content, Button, Wrapper } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 
 export const TasksList = () => {
-
+  
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search)
   const query = searchParams.get("szukaj")
-  
+
   const tasks = useSelector(state => selectTaskByQuery(state, query))
   const hideDone = useSelector(selectHideDone)
   const dispatch = useDispatch()
